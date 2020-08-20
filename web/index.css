@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input.openCal{
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+}
+
+div.cal{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+	user-select: none;
+}
+table{
+    width: 200px;
+    height: 250px;
+    margin: 100px auto;
+    text-align:center;
+    position: relative;
+    background: #eeddcc;
+}
+table tr td{
+    width: 50px;
+}
+table .Display{
+    height: 30px;
+}
+
+table tr td span{
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    right:1px;
+    background: #eeddcc;/*rgba(238,221,204,0.0);*/
+}
+
+table tr td input{
+    font-size: 20px;
+    width: 200px;
+    height: 100%;
+    text-align: right;      /* direction :rtl */
+    /***
+    color: transparent;
+    text-shadow: 0 0 0 #000; *//* text-shadow:x-offset y-offset blur color*/
+}
+
+table tr td textarea{
+    font-size: 20px;
+    width: 193px;
+    height: 100%;
+	resize: none;
+	outline:none;
+    text-align: right;
+}
+table tr td {
+    text-align: center;
+    font-size: 12px;
+}

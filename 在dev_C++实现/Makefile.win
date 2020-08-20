@@ -1,0 +1,31 @@
+# Project: 项目1
+# Makefile created by Dev-C++ 5.10
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = cal_example2.o shao_cal.o
+LINKOBJ  = cal_example2.o shao_cal.o
+LIBS     = -L"D:/软件/DevC++/Dev-Cpp/MinGW64/lib32" -L"D:/软件/DevC++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
+INCS     = -I"D:/软件/DevC++/Dev-Cpp/MinGW64/include" -I"D:/软件/DevC++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/软件/DevC++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"D:/软件/DevC++/Dev-Cpp/MinGW64/include" -I"D:/软件/DevC++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/软件/DevC++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"D:/软件/DevC++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = 项目1.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+cal_example2.o: cal_example2.c
+	$(CC) -c cal_example2.c -o cal_example2.o $(CFLAGS)
+
+shao_cal.o: shao_cal.c
+	$(CC) -c shao_cal.c -o shao_cal.o $(CFLAGS)
